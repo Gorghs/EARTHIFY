@@ -1,3 +1,6 @@
+"""
+Flask application for waste classification using ONNX model.
+"""
 from flask import Flask, request, render_template, jsonify, url_for
 from werkzeug.utils import secure_filename
 import os
