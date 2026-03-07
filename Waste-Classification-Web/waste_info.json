@@ -1,0 +1,110 @@
+{
+    "battery": {
+        "description": "Batteries should be taken to designated collection points for recycling or safe disposal. Do not throw into regular trash.",
+        "environmental_impact": "Batteries contain toxic chemicals that can pollute the environment if not disposed properly.",
+        "tips": "Store old batteries in a sealed container and bring to authorized collection centers.",
+        "recycle_centers": [
+            "Local battery recycling center",
+            "Electronics waste disposal facility"
+        ]
+    },
+    "biological": {
+        "description": "Biological waste includes food scraps, leaves, and other organic materials.",
+        "environmental_impact": "Without proper treatment, biological waste can cause odors and attract insects.",
+        "tips": "Separate biological waste for composting or bring to organic waste collection points.",
+        "recycle_centers": [
+            "Community composting facility",
+            "Organic waste collection center"
+        ]
+    },
+    "brown-glass": {
+        "description": "Brown glass bottles typically used for beer and some beverages.",
+        "environmental_impact": "Glass doesn't biodegrade but can be fully recycled.",
+        "tips": "Rinse thoroughly and sort by color before bringing to collection point.",
+        "recycle_centers": [
+            "Glass recycling facility",
+            "Waste management center"
+        ]
+    },
+    "cardboard": {
+        "description": "Cardboard boxes and rigid paperboard products.",
+        "environmental_impact": "Cardboard can be recycled but needs to be sorted and kept dry.",
+        "tips": "Flatten boxes and keep dry before bringing to collection center.",
+        "recycle_centers": [
+            "Paper recycling facility",
+            "Cardboard collection point"
+        ]
+    },
+    "clothes": {
+        "description": "Old or unused clothing and textiles.",
+        "environmental_impact": "Clothes don't decompose quickly and can be harmful if incinerated.",
+        "tips": "Donate to charity organizations or textile recycling centers.",
+        "recycle_centers": [
+            "Charity donation center",
+            "Textile recycling facility"
+        ]
+    },
+    "green-glass": {
+        "description": "Green glass bottles and containers.",
+        "environmental_impact": "Green glass can be recycled but needs to be sorted separately by color.",
+        "tips": "Rinse clean and sort by color before recycling.",
+        "recycle_centers": [
+            "Glass recycling center",
+            "Colored glass processing facility"
+        ]
+    },
+    "metal": {
+        "description": "Metal products such as aluminum cans and steel items.",
+        "environmental_impact": "Metals can be recycled many times without losing quality.",
+        "tips": "Rinse clean and compress to save space.",
+        "recycle_centers": [
+            "Metal recycling facility",
+            "Scrap metal collection center"
+        ]
+    },
+    "paper": {
+        "description": "Printed paper, writing paper and other paper products.",
+        "environmental_impact": "Paper can be recycled but needs to be sorted and kept dry.",
+        "tips": "Don't crumple and keep dry before bringing to collection center.",
+        "recycle_centers": [
+            "Paper recycling facility",
+            "Waste management center"
+        ]
+    },
+    "plastic": {
+        "description": "Plastic products such as water bottles and plastic bags.",
+        "environmental_impact": "Plastic takes hundreds of years to decompose and causes significant environmental damage.",
+        "tips": "Rinse clean and sort by plastic code before recycling.",
+        "recycle_centers": [
+            "Plastic recycling facility",
+            "Waste management center"
+        ]
+    },
+    "shoes": {
+        "description": "Old or damaged shoes and footwear.",
+        "environmental_impact": "Shoes typically contain many difficult-to-decompose materials.",
+        "tips": "Donate if still wearable or send to textile recycling centers.",
+        "recycle_centers": [
+            "Charity donation center",
+            "Footwear recycling facility"
+        ]
+    },
+    "trash": {
+        "description": "Non-recyclable waste and general refuse.",
+        "environmental_impact": "Pollutes the environment and takes up landfill space.",
+        "tips": "Minimize usage and sort properly to reduce trash.",
+        "recycle_centers": [
+            "Municipal waste facility",
+            "Landfill disposal"
+        ]
+    },
+    "white-glass": {
+        "description": "Clear glass bottles and containers.",
+        "environmental_impact": "Clear glass can be recycled but needs to be sorted separately by color.",
+        "tips": "Rinse clean and sort by color before recycling.",
+        "recycle_centers": [
+            "Glass recycling center",
+            "Clear glass processing facility"
+        ]
+    }
+}

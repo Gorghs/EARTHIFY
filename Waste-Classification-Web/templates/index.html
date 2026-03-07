@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EARTHIFY - Waste Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="nav-left">
+                <div class="logo">EARTHIFY</div>
+            </div>
+            <nav class="nav-center">
+                <a href="#" id="homeLink" class="nav-link active">HOME</a>
+                <a href="#" id="featuresLink" class="nav-link">FEATURES</a>
+                <a href="#" id="aboutLink" class="nav-link">ABOUT</a>
+            </nav>
+            <div class="nav-right">
+                <button id="themeBtn" class="theme-btn">◯</button>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="grid-wrapper" id="homeSection">
+            <!-- Left Sidebar -->
+            <aside class="sidebar left-sidebar">
+                <div class="sidebar-section">
+                    <h4 class="section-title">SYSTEM STATUS</h4>
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4 class="section-title">FEATURES</h4>
+                    <ul class="feature-list">
+                        <li>Real-time Detection</li>
+                        <li>Live Camera Feed</li>
+                        <li>Image Upload</li>
+                        <li>Waste Tips</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Center Content -->
+            <div class="center-content">
+                <!-- Title Section -->
+                <section class="title-section">
+                    <h1 class="main-title">EARTHIFY</h1>
+                    <div class="subtitle-box">
+                        <p>WASTE CLASSIFICATION | AI DETECTION</p>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Classification</span>
+                        <span class="tag">Real-time</span>
+                        <span class="tag">AI Systems</span>
+                    </div>
+                </section>
+
+                <!-- Mode Selection & Content -->
+                <section class="content-section">
+                    <div class="mode-buttons">
+                        <button id="uploadModeBtn" class="mode-btn active">UPLOAD IMAGE</button>
+                        <button id="liveModeBtn" class="mode-btn">LIVE CAMERA</button>
+                    </div>
+
+                    <!-- Upload Mode -->
+                    <div id="uploadMode" class="mode-content active">
+                        <label id="dropZone" class="drop-zone">
+                            <input id="fileInput" type="file" accept="image/*" hidden />
+                            <div class="drop-content">
+                                <p class="drop-title">DROP IMAGE HERE</p>
+                                <p class="drop-hint">or click to browse (JPG, PNG, WEBP)</p>
+                            </div>
+                        </label>
+
+                        <div id="previewWrap" class="preview hidden">
+                            <img id="previewImage" alt="Preview" class="preview-img"/>
+                            <button id="classifyBtn" class="btn btn-primary">CLASSIFY</button>
+                        </div>
+
+                        <div id="loading" class="loading hidden">
+                            <div class="spinner"></div>
+                            <p>Analyzing image...</p>
+                        </div>
+                    </div>
+
+                    <!-- Live Camera Mode -->
+                    <div id="liveMode" class="mode-content">
+                        <div class="camera-wrapper">
+                            <video id="cameraFeed" class="camera-feed" autoplay playsinline muted></video>
+                            <canvas id="captureCanvas" style="display:none;"></canvas>
+                            <div class="camera-controls">
+                                <button id="startCameraBtn" class="btn btn-primary">START CAMERA</button>
+                                <button id="stopCameraBtn" class="btn btn-secondary hidden">STOP CAMERA</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Card -->
+                    <article id="resultCard" class="result-card hidden">
+                        <div class="result-content">
+                            <div class="result-icon-section">
+                                <span id="resultIcon" class="result-icon">[R]</span>
+                            </div>
+                            <div class="result-info">
+                                <h2 id="resultLabel" class="result-label">-</h2>
+                                <p id="resultCategory" class="result-category">-</p>
+                                <div class="result-confidence">
+                                    <span>Confidence:</span>
+                                    <strong id="resultConfidence">-</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-tip-section">
+                            <h4>ECO TIP</h4>
+                            <p id="resultTip">-</p>
+                        </div>
+                    </article>
+
+                    <!-- Error Message -->
+                    <p id="errorText" class="error hidden"></p>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar right-sidebar">
+                <div class="sidebar-section">
+                    <h4 class="section-title">LOCATION</h4>
+                    <p class="info-text">GLOBAL</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4 class="section-title">STATUS</h4>
+                    <p class="info-text">ACTIVE</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4 class="section-title">DEVICE</h4>
+                    <p id="deviceInfo" class="info-text">-</p>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Features Section -->
+        <main class="features-section hidden" id="featuresSection">
+            <div class="section-container">
+                <h1 class="section-title-main">FEATURES</h1>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">▲</div>
+                        <h3>AI-POWERED DETECTION</h3>
+                        <p>Advanced machine learning model trained on 12 waste categories for high accuracy classification</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◻</div>
+                        <h3>REAL-TIME PROCESSING</h3>
+                        <p>Instant classification results with confidence scores to validate predictions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◆</div>
+                        <h3>IMAGE UPLOAD</h3>
+                        <p>Drag-and-drop or click to upload waste images for quick classification</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">▮</div>
+                        <h3>LIVE CAMERA FEED</h3>
+                        <p>Real-time waste detection using your device camera with continuous monitoring</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◇</div>
+                        <h3>ECO TIPS</h3>
+                        <p>Get actionable environmental tips for proper waste disposal and recycling</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◯</div>
+                        <h3>SUSTAINABLE IMPACT</h3>
+                        <p>Contribute to environmental conservation through intelligent waste classification</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- About Section -->
+        <main class="about-section hidden" id="aboutSection">
+            <div class="section-container">
+                <h1 class="section-title-main">ABOUT</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>EARTHIFY</h2>
+                        <p>An intelligent waste classification system powered by AI and deep learning. Our mission is to make waste sorting easier, faster, and more accurate to promote environmental sustainability.</p>
+                        <p>Built with cutting-edge technology including YOLO object detection, Flask backend, and modern web interfaces for a seamless user experience.</p>
+                    </div>
+                    <div class="about-divider"></div>
+                    <div class="about-socials">
+                        <h3>CONNECT WITH ME</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/gorghs" target="_blank" class="social-link">
+                                <span class="social-icon">◆</span>
+                                <span class="social-text">GITHUB</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/karthickv4/" target="_blank" class="social-link">
+                                <span class="social-icon">◇</span>
+                                <span class="social-text">LINKEDIN</span>
+                            </a>
+                            <a href="mailto:karthick.venkatachalem@gmail.com" class="social-link">
+                                <span class="social-icon">◈</span>
+                                <span class="social-text">EMAIL</span>
+                            </a>
+                            <a href="https://karthick-rnen.onrender.com" target="_blank" class="social-link">
+                                <span class="social-icon">◯</span>
+                                <span class="social-text">PORTFOLIO</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+        <footer class="footer">
+            <p>EARTHIFY - Intelligent Waste Classification System</p>
+            <p class="footer-sub">Powered by AI | Real-time Detection</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

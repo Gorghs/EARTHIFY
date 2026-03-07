@@ -1,0 +1,68 @@
+{
+  "product_info": {
+    "product_name": null,
+    "product_description": null,
+    "product_appearance": null,
+    "manufacturing_location": null,
+    "packaging_details": "Flexible plastic wrapper"
+  },
+  "extraction_data": {
+    "ingredients": [
+      "Refined Wheat Flour",
+      "Sugar",
+      "Refined Palm Oil",
+      "Invert Syrup",
+      "Liquid Glucose",
+      "Starch",
+      "Iodized Salt",
+      "Leavening Substances [INS 500(ii), INS 450(i)]",
+      "Colours [INS 150c, INS 150d, INS 122, INS 110, INS 102]",
+      "Emulsifiers [Lecithin (from soyabean), Polyoxyethylene (20) sorbitan monostearate (INS 432)]",
+      "Flavouring Substances (Vanilla, Milk, Chocolate)",
+      "Flour Treatment Agent (INS 223)"
+    ],
+    "nutritional_information": [
+      "Energy: 455 kcal (per 100g)",
+      "Total Sugars: 35.7 g (per 100g)",
+      "Added Sugars: 32.9 g (per 100g)",
+      "Total Fat: 13.9 g (per 100g)",
+      "Trans fat: 0.0 g (per 100g)",
+      "Sodium: 277.4 mg (per 100g)"
+    ],
+    "allergen_information": [
+      "Contains Wheat",
+      "Contains Soy",
+      "Contains Sulphite",
+      "May Contain Nut",
+      "May Contain Milk"
+    ],
+    "cautions_and_warnings": [
+      "May Contain Nut",
+      "May Contain Milk"
+    ]
+  },
+  "health_analysis": {
+    "positive_points": [],
+    "negative_points": [
+      "High in added sugars (32.9g per 100g).",
+      "High in refined carbohydrates (refined wheat flour).",
+      "Contains refined palm oil.",
+      "Contains artificial colours (INS 150c, 150d, 122, 110, 102).",
+      "Contains sulphites (from Flour Treatment Agent (INS 223))."
+    ]
+  },
+  "environmental_analysis": {
+    "positive_points": [],
+    "negative_points": [
+      "Single-use flexible plastic packaging.",
+      "Contains refined palm oil, which is often associated with environmental concerns like deforestation."
+    ]
+  },
+  "alternatives_to_consider": [
+    "Fresh fruits",
+    "Whole grain biscuits or crackers",
+    "Homemade snacks with less sugar",
+    "Nuts and seeds",
+    "Yogurt"
+  ]
+}
