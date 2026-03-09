@@ -1,5 +1,5 @@
 # pip install google-genai
-# api_key = "AIzaSyA9NwbueYwpGdqZvPBs-lLMblYgO7DdNB0"
+
 
 import os
 import mimetypes
